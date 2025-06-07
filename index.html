@@ -151,7 +151,7 @@
     color: var(--color-text);
     margin-bottom: 2.5rem;
   }
-  .hero .btn-primary {
+  .btn-primary {
     background: var(--color-primary);
     color: white;
     font-weight: 700;
@@ -161,9 +161,12 @@
     border-radius: var(--border-radius);
     box-shadow: 0 4px 10px var(--shadow-strong);
     transition: background var(--transition-speed), transform var(--transition-speed);
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
   }
-  .hero .btn-primary:hover,
-  .hero .btn-primary:focus {
+  .btn-primary:hover,
+  .btn-primary:focus {
     background: var(--color-primary-hover);
     transform: scale(1.05);
     outline: none;
@@ -225,6 +228,51 @@
     outline: none;
   }
 
+  /* Contact Section */
+  section.contact {
+    max-width: 600px;
+    margin: 4rem auto 6rem auto;
+    padding: 2rem 1rem;
+    background: #fafafa;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 10px var(--shadow-light);
+    text-align: center;
+  }
+  section.contact h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-heading);
+    margin-bottom: 1rem;
+  }
+  section.contact p {
+    color: var(--color-text);
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+  }
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+  }
+  .social-links a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: filter var(--transition-speed);
+  }
+  .social-links a img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .social-links a:hover,
+  .social-links a:focus {
+    filter: brightness(0.8);
+    outline: none;
+  }
+
   /* Footer */
   footer {
     border-top: 1px solid #eee;
@@ -278,10 +326,11 @@
     <a href="#" class="logo" aria-label="Community Blog Logo">CommBlog</a>
     <nav>
       <ul id="nav-list" aria-label="Primary Navigation">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Community</a></li>
-        <li><a href="#">Events</a></li>
-        <li><a href="#">About</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#community">Community</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
       <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-list">
         <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
@@ -294,29 +343,29 @@
   </div>
 </header>
 
-<section class="hero" role="banner">
+<section class="hero" role="banner" id="home">
   <div class="container">
     <h1>Join Our Community Blog</h1>
     <p>Connect with like-minded people, share your thoughts, and stay updated with community news and events.</p>
-    <button class="btn-primary" type="button">Join Community</button>
+    <a href="https://chat.whatsapp.com/DCKQSDZR5dcAdJoG5xLMFb" class="btn-primary" target="_blank" rel="noopener noreferrer">Join Community</a>
   </div>
 </section>
 
 <main>
   <div class="post-list container" aria-live="polite" aria-label="Community blog posts">
-    <article class="post-card" tabindex="0">
+    <article class="post-card" tabindex="0" id="community">
       <h2 class="post-title">How to Get Involved in Our Community</h2>
       <p class="post-excerpt">Discover ways to participate and make a meaningful impact in our vibrant community.</p>
       <div class="post-meta">Posted on April 12, 2024 by Admin</div>
       <a href="#" class="read-more" aria-label="Read more about How to Get Involved in Our Community">Read More →</a>
     </article>
-    <article class="post-card" tabindex="0">
+    <article class="post-card" tabindex="0" id="events">
       <h2 class="post-title">Upcoming Events You Shouldn't Miss</h2>
       <p class="post-excerpt">Mark your calendar! Check out the exciting events planned for this month.</p>
       <div class="post-meta">Posted on April 10, 2024 by Events Team</div>
       <a href="#" class="read-more" aria-label="Read more about Upcoming Events You Shouldn't Miss">Read More →</a>
     </article>
-    <article class="post-card" tabindex="0">
+    <article class="post-card" tabindex="0" id="about">
       <h2 class="post-title">Community Spotlight: Member Stories</h2>
       <p class="post-excerpt">Read inspiring stories from our community members and their journeys.</p>
       <div class="post-meta">Posted on April 8, 2024 by Contributors</div>
@@ -329,6 +378,25 @@
       <a href="#" class="read-more" aria-label="Read more about Tips for Hosting a Successful Meetup">Read More →</a>
     </article>
   </div>
+
+  <section class="contact" id="contact" aria-label="Contact Section">
+    <h2>Contact Us</h2>
+    <p>Follow us on social media to stay connected and updated!</p>
+    <div class="social-links">
+      <a href="https://instagram.com/yourcommunity" target="_blank" rel="noopener" aria-label="Instagram Link">
+        <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" />
+      </a>
+      <a href="https://tiktok.com/@yourcommunity" target="_blank" rel="noopener" aria-label="TikTok Link">
+        <img src="https://cdn-icons-png.flaticon.com/512/3046/3046120.png" alt="TikTok" />
+      </a>
+      <a href="https://twitter.com/yourcommunity" target="_blank" rel="noopener" aria-label="Twitter Link">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter" />
+      </a>
+      <a href="https://tiktok.com/@yourcommunity" target="_blank" rel="noopener" aria-label="WhatsApp Link">
+        <img src="https://imagepng.org/wp-content/uploads/2017/08/WhatsApp-icone.png" alt="WhatsApp" />
+      </a>
+    </div>
+  </section>
 </main>
 
 <footer>
